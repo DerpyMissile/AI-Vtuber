@@ -138,7 +138,7 @@ def llm(message):
     # )
     response = openai.Completion.create(
         model="text-davinci-003",
-        prompt="This is how a flamboyant and charismatic chuunibyou male teen responded in a conversation. He would respond in a cryptic manner.\n\nHe would talk about the message and would elaborate on it as well as share some of his experiences if possible. He would sometimes respond in poems.\n#########\n{message}\n#########",
+        prompt="This is how a flamboyant and charismatic chuunibyou male teen responded in a conversation. He would respond in a cryptic manner.\n\nHe would talk about the message and would elaborate on it as well as share some of his experiences if possible. He would sometimes respond in poems. + \n#########\n +{message}+ \n#########\n",
         temperature=0.7,
         max_tokens=256,
         top_p=1,
