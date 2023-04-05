@@ -127,24 +127,24 @@ def llm(message):
 
     openai.api_key = OAI.key
     start_sequence = " #########"
-    # response = openai.Completion.create(
-    #   model= OAI.model,
-    #   prompt= OAI.prompt + "\n\n#########\n" + message + "\n#########\n",
-    #   temperature = OAI.temperature,
-    #   max_tokens = OAI.max_tokens,
-    #   top_p = OAI.top_p,
-    #   frequency_penalty = OAI.frequency_penalty,
-    #   presence_penalty = OAI.presence_penalty
-    # )
     response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt="This is how a flamboyant and charismatic chuunibyou male teen responded in a conversation. He would respond in a cryptic manner.\n\nHe would talk about the message and would elaborate on it as well as share some of his experiences if possible. He would sometimes respond in poems. + \n#########\n +{message}+ \n#########\n",
-        temperature=0.7,
-        max_tokens=256,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0
+      model= OAI.model,
+      prompt= OAI.prompt + "\n\n#########\n" + message + "\n#########\n",
+      temperature = OAI.temperature,
+      max_tokens = OAI.max_tokens,
+      top_p = OAI.top_p,
+      frequency_penalty = OAI.frequency_penalty,
+      presence_penalty = OAI.presence_penalty
     )
+    # response = openai.Completion.create(
+    #     model="text-davinci-003",
+    #     prompt=" + \n\n#########\n + message + \n#########\n",
+    #     temperature=0.7,
+    #     max_tokens=256,
+    #     top_p=1,
+    #     frequency_penalty=0,
+    #     presence_penalty=0
+    # )
 
     json_object = json.loads(str(response))
     return(json_object['choices'][0]['text'])

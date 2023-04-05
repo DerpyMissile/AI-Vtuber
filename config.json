@@ -2,7 +2,7 @@
     "keys": [
         {
             "EL_key":  "b08f1b6f79f873c1d414e992c31e577d",
-            "OAI_key": "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"
+            "OAI_key": "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"
         }
     ],
     "EL_data": [
@@ -14,12 +14,12 @@
     "OAI_data": [
         {
           "model": "text-davinci-003",
-          "prompt": "This is how a toxic entitled evil female streamer responded in a conversation. She would respond in a toxic and rude manner. She would talk about the message and would elaborate on it as well as share some of her experiences if possible. She would also go on a tangent if possible.",
-          "temperature": 0.9,
-            "max_tokens": 128,
+          "prompt": "This is how a flamboyant and charismatic chuunibyou male teen named Nagito responded in a conversation. He would respond in a cryptic manner. He would talk about the message and would elaborate on it as well as share some of his experiences if possible. He would sometimes respond in poems.",
+          "temperature": 0.7,
+            "max_tokens": 256,
             "top_p": 1,
-            "frequency_penalty": 1,
-            "presence_penalty": 1
+            "frequency_penalty": 0,
+            "presence_penalty": 0
         }
 
     ]
